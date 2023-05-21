@@ -26,7 +26,7 @@ public partial class EmployeeContext : DbContext
 
     public virtual DbSet<Parttimeemployee> Parttimeemployees { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySQL("Data Source=localhost;Database=employeeInformation;User ID=root;Password=Toor2840!");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySQL("Data Source=localhost;Database=employeeInformation;User ID=root;Password=pass");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
