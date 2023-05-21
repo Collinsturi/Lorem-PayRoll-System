@@ -1,7 +1,14 @@
+using Lorem_PayRoll_System.Data;
+using Lorem_PayRoll_System.Repository.RepositoryWrapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddControllers();
+builder.Services.AddSingleton<EmployeeContext>();
+builder.Services.AddTransient<RepositoryWrapper>();
+
 
 var app = builder.Build();
 
@@ -21,5 +28,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapControllers();
 
 app.Run();
+
